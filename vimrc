@@ -8,9 +8,7 @@ noremap W 5w
 noremap B 5b
 
 " my vim theme config
-packadd! dracula
 syntax enable
-colorscheme dracula
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -22,7 +20,6 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 "add your vim Plugin
-Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
