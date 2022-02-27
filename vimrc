@@ -8,8 +8,6 @@ noremap W 5w
 noremap B 5b
 
 " my vim theme config
-syntax enable
+syntax on
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
+set number
