@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/yanhaoqing/project/jfbsas/项目代码/ETL'
+let g:netrw_dirhist_7='/Users/yanhaoqing/.vim'
+let g:netrw_dirhist_6='/Users/yanhaoqing/.vim/plugin'
+let g:netrw_dirhist_5='/Users/yanhaoqing/.vim/plugin/Vundle.vim'
+let g:netrw_dirhist_4='/Users/yanhaoqing/.vim/plugin'
+let g:netrw_dirhist_3='/Users/yanhaoqing/.vim'
 let g:netrw_dirhist_2='/Users/yanhaoqing/workspace/yzInfo'
 let g:netrw_dirhist_1='/Users/yanhaoqing/workspace'

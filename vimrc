@@ -10,7 +10,6 @@ noremap B 5b
 " 开启语法高亮功能
 syntax enable
 syntax on
-colorscheme solarized
 
 " 总是显示状态栏
 set laststatus=2
@@ -58,19 +57,17 @@ set nocompatible
 " 文件编码
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 
-" 自动加载 vim 的配
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 let g:python3_host_prog="/path/to/python/executable/"
- " 设置包括vundle和初始化相关的runtime path
-   set rtp+=~/.vim/bundle/Vundle.vim
-   call vundle#begin()
-   " 另一种选择, 指定一个vundle安装插件的路径
-   "call vundle#begin('~/some/path/here')
+"设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" 另一种选择, 指定一个vundle安装插件的路径
+"call vundle#begin('~/some/path/here')
 
-   " 让vundle管理插件版本,必须
-   Plugin 'VundleVim/Vundle.vim'
-   Plugin 'vim-autoformat/vim-autoformat'
+" 让vundle管理插件版本,必须
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-autoformat/vim-autoformat'
    " 导航目录侧边栏
 Plugin 'scrooloose/nerdtree'
 " 使nerdtree tab标签的名称更友好
@@ -114,10 +111,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'junegunn/vim-easy-align'
 " Python开发插件
 Plugin 'klen/python-mode'
-" Lua开发插件
-Plugin 'xolox/vim-lua-ftplugin'
-" Lua缩进插件
-Plugin 'raymond-w-ko/vim-lua-indent'
 " Go开发插件
 Plugin 'fatih/vim-go'
 " Vue开发插件
@@ -134,13 +127,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 " 配色插件（深色/浅色）
 Plugin 'noahfrederick/vim-hemisu'
-" 配色
-Plugin 'tomasr/molokai'
-" 颜色主题
-Plugin 'zaki/zazen'
-" 关闭全部的Buff, 除了当前的
-Plugin 'vim-scripts/BufOnly.vim'
-   call vundle#end()           
+
+Plugin 'JamshedVesuna/vim-markdown-preview'
+call vundle#end()           
 " 文件编码
   set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
@@ -188,64 +177,6 @@ let g:pymode_python = 'python3'
 " close syntax when save file
 let g:pymode_lint_on_write = 0
 
-
-" YouCompleteMe 自动补全
-" preview window settiing
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-" typing 2 chars
-let g:ycm_min_num_of_chars_for_completion = 2
-" Completion when typing inside comments
-let g:ycm_complete_in_comments = 1  
-" Query the UltiSnips plugin
-let g:ycm_use_ultisnips_completer = 1 
-" Collect identifiers from strings and comments and tag fiels
-let g:ycm_collect_identifiers_from_comments_and_strings = 1   
-let g:ycm_collect_identifiers_from_tags_files = 1
-" some symbols
-let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '>*'
-" Specifies Python interpreter to run jedi
-let g:ycm_python_binary_path = 'python3'
-" Seed its identifier database
-" let g:ycm_seed_identifiers_with_syntax=1
-" youcompleteme select keys
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-" Where GoTo* commands result should be opened, same-buffer
-let g:ycm_goto_buffer_command = 'horizontal-split'
-" nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-" ,jd
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" ,gd
-nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
-" ycm 配置
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-" blacklist
-let g:ycm_filetype_blacklist = {
-    \ 'gitcommit' : 1,
-    \ 'tagbar' : 1,
-    \ 'qf' : 1,
-    \ 'notes' : 1,
-    \ 'markdown' : 1,
-    \ 'unite' : 1,
-    \ 'text' : 1,
-    \ 'vimwiki' : 1,
-    \ 'pandoc' : 1,
-    \ 'infolog' : 1,
-    \ 'mail' : 1
-    \}
-
-
-" 代码片段
-let g:UltiSnipsExpandTrigger       = "<TAB>"
-let g:UltiSnipsJumpForwardTrigger  = "<TAB>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-TAB>"
-let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
-let g:UltiSnipsSnippetsDir = '~/.vim/bundle/vim-snippets/UltiSnips'
-" ,us 修改当前文件类型的代码片段
-map <leader>us :UltiSnipsEdit<CR>
 
 " ctrl+j/k
 func! g:JInYCM()
@@ -302,4 +233,4 @@ nnoremap <leader>gtlg :Glog<CR>
 
 
 
-
+let vim_markdown_preview_github=1
