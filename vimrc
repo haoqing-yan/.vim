@@ -1,9 +1,9 @@
 
 " 快速移动
 nnoremap H 0
-nnoremap N 5j
-nnoremap E 5k
-nnoremap I $
+nnoremap J 5j
+nnoremap K 5k
+nnoremap L $
 
 " 语法高亮
 syntax enable
@@ -86,7 +86,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
-Plug 'jooize/vim-colemak'
+"Plug 'jooize/vim-colemak'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
