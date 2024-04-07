@@ -1,0 +1,17 @@
+# Vim related files
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]*.swp
+[._]swo
+[._]swn
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# ctags generated tags
+tags
+
+# Vim undo files
+*.undo
+
