@@ -15,3 +15,6 @@ tags
 # Vim undo files
 *.undo
 
+# vim-plug generated files
+autoload/plug.vim
+plugged/
